@@ -40,6 +40,8 @@ func main() {
 	flag.Parse()
 
 	if *removePtr == "" {
+		fmt.Println("paramcut: Remove URL parameters that match the Regex patterns")
+		fmt.Println("Version: 0.0.4")
 		fmt.Println("Usage: paramcut -r \"utm_.*\" [-u url]")
 		os.Exit(1)
 	}
