@@ -31,7 +31,7 @@ func main() {
 	flag.Parse()
 
 	if *removePtr == "" {
-		fmt.Println("Usage: urlfilter -r itm_medium,itm_source [-u url]")
+		fmt.Println("Usage: paramcut -r itm_medium,itm_source [-u url]")
 		os.Exit(1)
 	}
 
