@@ -14,7 +14,7 @@ endif
 
 all: build
 build:
-	$(GOBUILD) $(GOFLAGS) -ldflags '$(LDFLAGS)' -o "paramcut" cmd/main.go
+	$(GOBUILD) $(GOFLAGS) -ldflags '$(LDFLAGS)' -o "paramcut" cmd/paramcut/main.go
 test:
 	$(GOTEST) $(GOFLAGS) ./...
 integration:
