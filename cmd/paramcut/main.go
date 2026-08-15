@@ -41,7 +41,7 @@ func main() {
 
 	if *removePtr == "" {
 		fmt.Println("paramcut: Remove URL parameters that match the Regex patterns")
-		fmt.Println("Version: 0.0.4")
+		fmt.Println("Version: 0.0.5")
 		fmt.Println("Usage: paramcut -r \"utm_.*\" [-u url]")
 		os.Exit(1)
 	}
@@ -54,7 +54,8 @@ func main() {
 		if p == "" {
 			continue
 		}
-		re, err := regexp.Compile(p)
+
+		re, err := regexp.Compile("(?i)" + p)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Invalid regex: %s\n", p)
 			continue
